@@ -1,4 +1,5 @@
 #!/bin/bash
+# jane script
 function myFunc() {
 	local count=0
 	if (echo "$1" | egrep -q "Func$" > /dev/null 2>&1) ; then
