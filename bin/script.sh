@@ -5,6 +5,6 @@ lib="lib/script.inc.sh"
 f=${1}
 shift
 case $f in
-	my|jane) ${f}Func $@ || quit "myFunc Failed" $? ;;
+	my|jane) ${f}Func $@ || quit "myFunc '$@' Failed" $? ;;
 	*) quit "'${f}' no function found" ;;
 esac
