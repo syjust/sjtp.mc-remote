@@ -1,4 +1,6 @@
 #!/bin/bash
+# v0.0.2
+
 lib="lib/script.inc.sh"
 [ ! -e $lib ] && echo "$lib not found" && exit 1
 . $lib
