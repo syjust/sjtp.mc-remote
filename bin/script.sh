@@ -6,7 +6,9 @@ lib="lib/script.inc.sh"
 . $lib
 f=${1}
 shift
+
 case $f in
+	# exec func or exit
 	my|jane) ${f}Func $@ || quit "myFunc '$@' Failed" $? ;;
 	*) quit "'${f}' no function found" ;;
 esac
