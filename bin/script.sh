@@ -2,4 +2,9 @@
 lib="lib/script.inc.sh"
 [ ! -e $lib ] && echo "$lib not found" && exit 1
 . $lib
-myFunc $@ || quit "myFunc Failed" $?
+f=${1}
+shift
+case $f in
+	my|jane) ${f}Func $@ || quit "myFunc Failed" $? ;;
+	*) quit "'${f}' no function found" ;;
+esac
