@@ -6,6 +6,7 @@ function myFunc() {
 		printf "  %03d. '%s'\n" "$count" "$i"
 		let count++
 	done
+	return 0
 }
 function quit() {
 	echo -e "$@"
